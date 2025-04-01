@@ -106,8 +106,28 @@ public class Solution {
 
     public void outputList(ArrayList<Car> list){
         for (Car car : list) {
-            System.out.println(car.getPlate()+" "+car.getBrand());
+            System.out.printf("%s %s %.2f\n",car.getPlate(),car.getBrand(),car.getPrice());
         }
+    }
+
+    public void selection(){
+        ArrayList<Car> expensiveList=new ArrayList<>();
+        ArrayList<Car> cheapList=new ArrayList<>();
+        // int j=0;
+        // int k=0;
+        for (Car car : carList) {
+            if (car.getPrice()>=1000) {
+                expensiveList.add(car);
+            }
+            else{
+                cheapList.add(car);
+            }
+        }
+        System.out.println("---");
+        System.out.println("Drága autók listája: ");
+        outputList(expensiveList);
+        System.out.println("Olcsó autók listája: ");
+        outputList(cheapList);
     }
 
 

@@ -9,5 +9,6 @@ public class App {
         sol.positionOfCitroen();
         sol.positionOfLada();
         sol.ladaSelection();
+        sol.selection();
     }
 }
